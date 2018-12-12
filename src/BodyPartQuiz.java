@@ -31,25 +31,66 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int score = 96;
 		// 2. Set the size of the window in the initializeGui() method below
-			
 		// 4. Ask the user who this person is and store their answer
-		String guess= JOptionPane.showInputDialog("who is this?");
-
-		// 5. Check their answer. If they guessed correctly:
-		// -- Tell them they are right and increase the score by 1
-
-		// 6. Otherwise:
-		// -- Tell them they are wrong and who the person is
-
-		// 7. Use the showNextImage() method below to get the next image
+		String guess = JOptionPane.showInputDialog("who is this?");
+		if (guess.equalsIgnoreCase("mr. hair") || guess.equalsIgnoreCase("mr hair")) {
+			JOptionPane.showMessageDialog(null, "you  correct fool. you\"r absloutely righ t");
+			score++;
+		} else {
+			JOptionPane.showMessageDialog(null, "no!!!! its world-Famous актёр mr. hair ,");
+		}
 		showNextImage();
-	    	// 8. Show them their current score
-
+		JOptionPane.showMessageDialog(null, "ccurrent scorE; " + score);
+		
 		// 9. .... repeat for all your images.....
+		guess = JOptionPane.showInputDialog("who,s this then.");
+		if (guess.equalsIgnoreCase("leonardo davinci")) {
+			JOptionPane.showMessageDialog(null, "smart . you did Not get him  .confused. with the Famous Painter lenoardo di carpio");
+			score++;
+		} else {
+			JOptionPane.showMessageDialog(null, "**leardo davinci**");
+		}
+		showNextImage();
+		JOptionPane.showMessageDialog(null, ",,,Curren! tScore! :" + score);
 
-
+		guess = JOptionPane.showInputDialog("You. Will never Figure; out \"this.\" celebrity,");
+		if (guess.equalsIgnoreCase("mortal freeman")) {
+			JOptionPane.showMessageDialog(null, "ok Fair enough(");
+			score++;
+		} else {
+			JOptionPane.showMessageDialog(null, "you are'nt EVER a world=famuos celebrity Expertt because .., it wa s,,,,, MORTAL FREEMAN");
+		}
+		showNextImage();
+		JOptionPane.showMessageDialog(null, "куррент Скор" + score);
+		
+		guess = JOptionPane.showInputDialog("noboody has  h eard of [CELEBRITY .. maybe -YOu- can !!");
+		if (guess.contains("unknown")) {
+			JOptionPane.showMessageDialog(null, "RIGHT ! nobody know's yet ");
+			score++;
+		} else {
+			JOptionPane.showMessageDialog(null, "hey Listen write here mr Wrong,, thiscelebrit is secret \"&\" noone knows who theyre * itsUknown");
+		}
+		JOptionPane.showMessageDialog(null, "yoUr .sCorE.   " + score);
+		
+		switch(score) {
+		case 96:
+			JOptionPane.showMessageDialog(null, "ok listen here Bud.  take Away a momen tof youre ttime Bucko. you don\"t knovv ANY celebrity's and \"4\" Dat ur goin'. to. Jail ,learn bettter nexttime ,");
+			break;
+		case 97:
+			JOptionPane.showMessageDialog(null, "a'ight Freind u know 1 celebrety {out of the `Four` in the WOrld ) but thats O. K. keep learnen' and 1 day U  may nnow every celebertie!!!! !!");
+			break;
+		case 98:
+			JOptionPane.showMessageDialog(null, "to qoute a common frase ,. ''Your Right in The midle'' your right in the middle. yo ugot 2 outta 4r and THats \nGreat!!!!! good job your the best,,,,, (not yet but ur close KEEP TRYiN\"");
+			break;
+		case 99:
+			JOptionPane.showMessageDialog(null, "ya Gotta lern $about$ '1` MORE ceLEBRit y!!   ur ALMOSTTTT:  their just ;KEep TRYIN your  ALMOST a CeLeBIrity!!! ExperRtT!!!! woooWOoooWOoooOOOooOowwWw!!");
+			break;
+		case 100:
+			JOptionPane.showMessageDialog(null, "O.M.G.. (oH mY Gosh,,,) yuo kn0w EveRY ce:lebrty!!!!!\n! w. wh... ewhhge whhhat! are oyu goint o do, with This ,new Found  lnowledge!!! AAAAAAHHaAHAHHHHHHHHHHHHHHHH whAT a ProfEsiional ur So Smart!!!!! AAAAA");
+			break;
+		}
 	}
 
 	public void showNextImage() {
@@ -71,7 +112,7 @@ public class BodyPartQuiz {
 		window.add(panel);
 		
 		// 3. Change the size of the window so that you can only see part of the image.		
-		window.setSize(500,500);
+		window.setSize(20, 175);
 		
 		showNextImage();
 		
