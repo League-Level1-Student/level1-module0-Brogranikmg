@@ -2,11 +2,15 @@ import ddf.minim.*;
 PImage recordPicture;
 int speed = 0;
 int velocity = 0;
+Minim minim;
+AudioPlayer song;
 
 void setup() {
   size(600, 600);
   recordPicture = loadImage("record.png");
   recordPicture.resize(600, 600);
+  minim = new Minim(this);
+  song = minim.loadFile("jazz.mp3", 512);
 }
 
 void draw() {
@@ -14,6 +18,9 @@ void draw() {
   image(recordPicture, 0, 0);
   if (mousePressed == true) {
     velocity = velocity + 5;
+    song.play();
+  } else {
+    song.pause();
   }
   speed += velocity;
   velocity *= 0.9;

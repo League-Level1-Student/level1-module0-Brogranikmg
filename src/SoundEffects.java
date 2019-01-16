@@ -30,6 +30,7 @@ public class SoundEffects implements ActionListener {
 		panel.add(scream);
 		scream.addActionListener(this);
 		frame.pack();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 	@Override
